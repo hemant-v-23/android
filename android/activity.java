@@ -37,7 +37,6 @@ public class LoginActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // redirect to RegisterActivity
                 Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intent);
             }
@@ -45,7 +44,6 @@ public class LoginActivity extends AppCompatActivity {
     }
 	
     public void SetValidation() {
-    	// Check for a valid email address.
         if (email.getText().toString().isEmpty()) {
             email.setError(getResources().getString(R.string.email_error));
             isEmailValid = false;
@@ -56,7 +54,6 @@ public class LoginActivity extends AppCompatActivity {
             isEmailValid = true;
         }
 	
-        // Check for a valid password.
         if (password.getText().toString().isEmpty()) {
             password.setError(getResources().getString(R.string.password_error));
             isPasswordValid = false;
